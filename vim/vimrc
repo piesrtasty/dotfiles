@@ -1,3 +1,7 @@
+"start pathogen - must come first
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set go-=T                           "hide toolbar in mvim
 set guifont=inconsolata:h15         "Set a better font
 set number                          "Line Numbers
