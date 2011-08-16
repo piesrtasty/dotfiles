@@ -1,0 +1,10 @@
+function precmd {
+	local TERMWIDTH
+	(( TERMWIDTH = ${COLUMNS} -1 ))
+	cwd=$PWD
+	if [[ $cwd/ = "$HOME"/* ]]; then cwd=\~${cwd#$HOME}; fi
+	vcinfo=`vcprompt -f "%u%m[%n:%b]"`
+	printf "\n$cyn%s:$ylw%s$red%$(($TERMWIDTH-${#HOST}-${#cwd}))s$rst\n" "$HOST" "$cwd" "$vcinfo"
+}
+
+PROMPT="→ "
