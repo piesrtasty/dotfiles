@@ -6,3 +6,22 @@ set go-=T                           "hide toolbar in mvim
 set guifont=inconsolata:h15         "Set a better font
 set number                          "Line Numbers
 syntax on
+
+set nobackup        
+set noswapfile                      "Don't use swap files
+
+"Indentation Options
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+au FocusLost * :wa                  "save all files on window focus lost
+
+function! Fix_markdown_for_tut()
+    %s/\(<h\d\) id='.*'>/\1>/
+    %s/<pre><code>/<pre class="" name="code">
+    %s/<\/code>\(<\/pre>\)/\1/
+endfunction
+
+command! Fm call Fix_markdown_for_tut()
