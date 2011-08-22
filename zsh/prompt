@@ -3,8 +3,14 @@ function precmd {
 	(( TERMWIDTH = ${COLUMNS} -1 ))
 	cwd=$PWD
 	if [[ $cwd/ = "$HOME"/* ]]; then cwd=\~${cwd#$HOME}; fi
-	vcinfo=`vcprompt -f "%u%m[%n:%b]"`
-	printf "\n$cyn%s:$ylw%s$red%$(($TERMWIDTH-${#HOST}-${#cwd}))s$rst\n" "$HOST" "$cwd" "$vcinfo"
+	vcinfo=`vcprompt -f "%m%u[%n:%b]"`
+	if [[ $vcinfo = *\?* || $vcinfo = *\+* ]]
+	then
+		c=$red
+	else
+		c=$grn
+	fi
+	printf "\n$cyn%s:$ylw%s$c%$(($TERMWIDTH-${#HOST}-${#cwd}))s$rst\n" "$HOST" "$cwd" "$vcinfo"
 }
 
 PROMPT="→ "
