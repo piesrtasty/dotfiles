@@ -11,10 +11,16 @@ set nobackup
 set noswapfile                      "Don't use swap files
 
 "Indentation Options
+set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+
+set autoindent
+
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 au FocusLost * :wa                  "save all files on window focus lost
 
