@@ -2,6 +2,8 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let mapleader = ","
+
 set go-=T                           "hide toolbar in mvim
 set guifont=inconsolata:h15         "Set a better font
 set number                          "Line Numbers
@@ -15,6 +17,25 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+
+"Find and Replace Options
+set hlsearch                        "highlights search results
+set incsearch                       "shows search matches as you type
+set showmatch                       "another search thing
+set smartcase                       "if caps, watch case
+set ignorecase                      "if all lowercase, ignore case 
+
+nnoremap / /\v
+vnoremap / /\bv
+set gdefault
+nnoremap <leader><space> :noh<cr>
+
+
+"Line wrapping
+nmap <leader>wrap :set wrap nolist linebreak<cr>
+nmap <leader>nowrap :set nowrap nolist nolinebreak<cr>
+
 
 set autoindent
 
