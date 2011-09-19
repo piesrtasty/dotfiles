@@ -52,3 +52,25 @@ function! Fix_markdown_for_tut()
 endfunction
 
 command! Fm call Fix_markdown_for_tut()
+
+function! Fix_google_docs_html()
+    %s/ style="[A-Za-z0-9;:\-\# ]*"//
+    %s/ start="\d*"//
+    %s/<ol>/<ul>/
+    %s/<\/ol>/<\/ul>/
+    %s/<span>//
+    %s/<\/span>//
+    %s/\(<\/\w*>\)/\1\r/
+    %s/<p><\/p>\n//
+    %s/<html>//
+    %s/<head>//
+    %s/<title>.*<\/title>//
+    %s/<\/head>//
+    %s/<body>//
+    %s/<\/body>//
+    %s/<\/html>
+    "%s/<\/ul>\n<ul>/<ul>
+    wq
+endfunction
+
+command! Fgd call Fix_google_docs_html()
