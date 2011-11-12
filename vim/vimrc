@@ -5,7 +5,7 @@ call pathogen#helptags()
 let mapleader = ","
 
 set go-=T                           "hide toolbar in mvim
-set guifont=inconsolata:h15         "Set a better font
+set guifont=inconsolata:h16         "Set a better font
 set number                          "Line Numbers
 syntax on
 
