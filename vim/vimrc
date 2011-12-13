@@ -9,6 +9,9 @@ set guifont=inconsolata:h16         "Set a better font
 set number                          "Line Numbers
 syntax on
 
+abbrev W w
+abbrev Wq wq
+
 set nobackup        
 set noswapfile                      "Don't use swap files
 
