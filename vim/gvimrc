@@ -1,2 +1,5 @@
+set go-=T                           "hide toolbar in mvim
+set guifont=inconsolata:h16         "Set a better font
 set background=dark
 colorscheme solarized
+set lines=65 columns=110
