@@ -41,7 +41,7 @@ nmap <leader>nowrap :set nowrap nolist nolinebreak<cr>
 set autoindent
 
 
-let javaScript_fold=1 "folding in JavaScript
+"let javaScript_fold=1 "folding in JavaScript
 
 if has("autocmd")
   filetype plugin indent on
@@ -51,8 +51,8 @@ au FocusLost * :wa                  "save all files on window focus lost
 
 function! Fix_markdown_for_tut()
     %s/\(<h\d\) id='.*'>/\1>/
-    %s/<pre><code>//
-    %s/<\/code>\(<\/pre>\)//
+    %s/<pre><code>/[js]/
+    %s/<\/code>\(<\/pre>\)/[\/js]/
     "%s/<pre><code>/<pre class="" name="code">
     "%s/<\/code>\(<\/pre>\)/\1/
 endfunction
