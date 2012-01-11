@@ -8,3 +8,9 @@ function take {
 	mkdir $1
 	cd $1
 }
+
+function google () {
+  lynx "google.com/search?q=$1"
+}
+
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
