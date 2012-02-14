@@ -13,4 +13,9 @@ function google () {
   lynx "google.com/search?q=$1"
 }
 
+function server() {
+    local port="${1:-8000}"
+    open "http://localhost:${port}/" && python -m SimpleHTTPServer "$port"
+}
+
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
