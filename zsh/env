@@ -1,4 +1,4 @@
-export PATH="/Users/andrew/bin:$PATH"
+export PATH="/Users/andrew/bin:/Users/andrew/.cabal/bin:$PATH"
 
 rst="\033[0m"    # unsets color to term fg color
 blk="\033[0;30m"    # black
