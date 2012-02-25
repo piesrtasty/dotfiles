@@ -19,3 +19,13 @@ function server() {
 }
 
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+
+
+# Parameters: as many paths to files playable by `afplay` as you like
+function tunes () {
+  for arg in $@
+  do
+    echo $arg
+    afplay $arg
+  done
+}
