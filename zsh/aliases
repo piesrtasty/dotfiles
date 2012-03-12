@@ -29,3 +29,30 @@ function tunes () {
     afplay $arg
   done
 }
+
+function audio () {
+  if [ $2 ]
+  then
+    name=$2
+  else
+    name=$1
+  fi
+
+  x="/Users/andrew/.youtube-dl-$RANDOM-$RANDOM.mp4"
+  youtube-dl --output $x --format=18 "$1"
+  #ffmpeg -i $x -f mp3 -ab 192000 -vn "$name.mp3"
+  vaudio $x $name
+  rm $x
+  afplay "$name.mp3"
+}
+
+function vaudio () {
+  if [ $2 ]
+  then
+    name=$2
+  else
+    name=$1
+  fi
+  ffmpeg -i $1 -f mp3 -ab 192000 -vn "$2.mp3"
+}
+
