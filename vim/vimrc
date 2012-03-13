@@ -37,6 +37,8 @@ nnoremap <leader><space> :noh<cr>
 abbrev wrap set wrap nolist linebreak
 abbrev nowrap set nowrap nolist nolinebreak
 
+abbrev c CoffeeRun
+
 
 set autoindent
 
