@@ -34,8 +34,8 @@ nnoremap <leader><space> :noh<cr>
 
 
 "Line wrapping
-nmap <leader>wrap :set wrap nolist linebreak<cr>
-nmap <leader>nowrap :set nowrap nolist nolinebreak<cr>
+abbrev wrap set wrap nolist linebreak
+abbrev nowrap set nowrap nolist nolinebreak
 
 
 set autoindent
