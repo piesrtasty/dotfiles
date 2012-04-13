@@ -7,8 +7,8 @@ let mapleader = ","
 set number                          "Line Numbers
 syntax on
 
-abbrev W w
-abbrev Wq wq
+cnoreabbrev W w
+cnoreabbrev Wq wq
 
 set nobackup        
 set noswapfile                      "Don't use swap files
@@ -37,7 +37,7 @@ nnoremap <leader><space> :noh<cr>
 abbrev wrap set wrap nolist linebreak
 abbrev nowrap set nowrap nolist nolinebreak
 
-abbrev c CoffeeRun
+cnoreabbrev c CoffeeRun
 
 
 set autoindent
