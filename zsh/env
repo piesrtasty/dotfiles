@@ -1,4 +1,5 @@
 export PATH="/Users/andrew/bin:/Users/andrew/.cabal/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules/"
 
 rst="\033[0m"    # unsets color to term fg color
 blk="\033[0;30m"    # black
