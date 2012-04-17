@@ -5,7 +5,7 @@ alias gl='git log'
 alias ga='git add'
 
 function take {
-	mkdir $1
+	mkdir -p $1
 	cd $1
 }
 
